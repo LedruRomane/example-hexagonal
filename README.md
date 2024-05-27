@@ -31,6 +31,8 @@ make install
 ### Install database
 > [!TIP]
 > [Working with ULIDs & Database](./docs/ulid.md)
+> 
+> [Working with Fixtures](./docs/fixtures.md)
 ```shell
 make db.install
 make db.fixtures
@@ -66,6 +68,11 @@ make stop
 ## Going further
 
 - [How to authenticate as a User for GraphiQL console](./docs/graphiql_auth.md)
+- [Tests & debug](./docs/tests.md)
+- [Fixtures & stories](./docs/fixtures.md)
+- [Working with ULIDs](./docs/ulid.md)
+- [GraphiQL: how to trigger queries and mutations](./docs/graphiql.md)
+- [Usecase: how to trigger the forgot password](./docs/forgot_password.md)
 
 ## Urls
 
