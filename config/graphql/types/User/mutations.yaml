@@ -1,0 +1,54 @@
+UserMutations:
+  type: object
+  config:
+    fields:
+
+      create:
+        type: User
+        resolve: "@=mutation('User.create', args)"
+        access: "@=isGranted('ROLE_ADMIN')"
+        description: Ajouter un nouvel utilisateur
+        args:
+          payload:
+            type: UserPayload!
+
+      update:
+        type: User
+        resolve: "@=mutation('User.update', args['uid'], args)"
+        access: "@=isGranted('ROLE_ADMIN')"
+        description: Modifier un utilisateur
+        args:
+          uid:
+            type: ULID!
+            description: 'A user uid'
+          payload:
+            type: UserPayload!
+
+      updateMyProfile:
+        type: User
+        resolve: "@=mutation('User.updateMyProfile', args)"
+        access: "@=isAuthenticated()"
+        description: Modifier mon profil
+        args:
+          payload:
+            type: MyProfilePayload!
+
+      forgotPassword:
+        type: Boolean!
+        resolve: "@=mutation('User.forgotPassword', args['email'])"
+        description: Demander à recevoir un lien par email pour réinitialiser le mot de passe
+        args:
+          email:
+            type: Email!
+            description: 'A user email'
+
+      resetPassword:
+        type: Boolean!
+        resolve: "@=mutation('User.resetPassword', args['token'], args)"
+        description: Réinitialiser le mot de passe à partir d'un lien/token reçu par email
+        args:
+          token:
+            type: String!
+            description: 'The token the user received by email / extracted from the URL'
+          payload:
+            type: ResetPasswordPayload!

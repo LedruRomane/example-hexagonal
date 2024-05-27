@@ -1,0 +1,8 @@
+Query:
+  type: object
+  config:
+    fields:
+
+      User:
+        type: UserQueries!
+        resolve: "@=query('NamespacedQuery')"

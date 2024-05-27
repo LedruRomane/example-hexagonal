@@ -3,8 +3,23 @@
 /.env.local
 /.env.local.php
 /.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
+/config/secrets/**/*.decrypt.private.php
+!/config/secrets/**/local.decrypt.private.php
 /public/bundles/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> tools ###
+/tools/**/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###

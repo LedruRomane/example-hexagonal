@@ -1,0 +1,44 @@
+{
+  "data": {
+    "User": {
+      "list": [
+        {
+          "uid": "01H3CFAYHK2EV1KYXYQ21EW7XR",
+          "email": "admin@example.com",
+          "firstname": "Joe",
+          "lastname": "Admin",
+          "roles": [
+            "ROLE_ADMIN"
+          ],
+          "isActive": true,
+          "isAdmin": true,
+          "createdAt": "2020-01-01T00:00:00+00:00"
+        },
+        {
+          "uid": "01H3CFB8XBSJDCQSHKB8PJXQBX",
+          "email": "user@example.com",
+          "firstname": "John",
+          "lastname": "ADV",
+          "roles": [
+            "ROLE_USER"
+          ],
+          "isActive": true,
+          "isAdmin": false,
+          "createdAt": "2020-01-01T00:00:00+00:00"
+        },
+        {
+          "uid": "01H5H7P6A51A4QPPP3ZN5P8G06",
+          "email": "inactive@example.com",
+          "firstname": "Joy",
+          "lastname": "ADV",
+          "roles": [
+            "ROLE_USER"
+          ],
+          "isActive": false,
+          "isAdmin": false,
+          "createdAt": "2020-01-01T00:00:00+00:00"
+        }
+      ]
+    }
+  }
+}

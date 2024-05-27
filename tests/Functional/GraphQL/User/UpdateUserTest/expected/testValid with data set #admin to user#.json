@@ -1,0 +1,18 @@
+{
+  "data": {
+    "User": {
+      "update": {
+        "uid": "01H3CFAYHK2EV1KYXYQ21EW7XR",
+        "email": "admin@example.com",
+        "firstname": "John",
+        "lastname": "Doe",
+        "roles": [
+          "ROLE_USER"
+        ],
+        "isActive": false,
+        "isAdmin": false,
+        "createdAt": "2020-01-01T00:00:00+00:00"
+      }
+    }
+  }
+}

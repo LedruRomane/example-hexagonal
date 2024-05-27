@@ -1,0 +1,44 @@
+framework:
+    messenger:
+        failure_transport: failed
+
+        transports:
+            # https://symfony.com/doc/current/messenger.html#transport-configuration
+            async:
+                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+                options:
+                    auto_setup: false # Do not automatically create messenger DB tables
+                    queue_name: event
+                    table_name: messenger_messages
+                retry_strategy:
+                    max_retries: 3
+                    # milliseconds delay - 10 seconds
+                    delay: 10_000
+                    # causes the delay to be higher before each retry
+                    # e.g. 10 second delay, 20 seconds, 40 seconds, etc.
+                    multiplier: 2
+            failed: 'doctrine://default?queue_name=failed'
+            # sync: 'sync://'
+
+        routing:
+        #Symfony\Component\Mailer\Messenger\SendEmailMessage: async
+        #Symfony\Component\Notifier\Message\ChatMessage: async
+        #Symfony\Component\Notifier\Message\SmsMessage: async
+
+        # Route your messages to the transports
+        # 'App\Message\YourMessage': async
+
+        # The bus that is going to be injected when injecting MessageBusInterface:
+        default_bus: messenger.bus.commands
+
+        # Create buses
+        buses:
+            messenger.bus.commands:
+                middleware:
+                    - doctrine_ping_connection
+                    - doctrine_close_connection
+                    - validation
+                    - doctrine_transaction
+            messenger.bus.queries:
+                middleware:
+                    - validation

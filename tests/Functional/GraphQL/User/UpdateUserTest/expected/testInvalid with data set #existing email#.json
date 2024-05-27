@@ -1,0 +1,39 @@
+{
+  "errors": [
+    {
+      "message": "Invalid payload",
+      "locations": [
+        {
+          "line": 3,
+          "column": 5
+        }
+      ],
+      "path": [
+        "User",
+        "update"
+      ],
+      "code": "INVALID_PAYLOAD",
+      "api_problem": {
+        "type": "https:\/\/symfony.com\/errors\/validation",
+        "title": "Validation Failed",
+        "detail": "payload.email:  Cet email \"test-existing-user@example.com\" est déjà utilisé.",
+        "violations": [
+          {
+            "propertyPath": "payload.email",
+            "title": " Cet email \"test-existing-user@example.com\" est déjà utilisé.",
+            "template": "The email {{ value }} is already used.",
+            "parameters": {
+              "{{ value }}": "\"test-existing-user@example.com\""
+            },
+            "type": "urn:uuid:ca2aafec-1542-4b55-8e5f-128e88e9f68a"
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "User": {
+      "update": null
+    }
+  }
+}

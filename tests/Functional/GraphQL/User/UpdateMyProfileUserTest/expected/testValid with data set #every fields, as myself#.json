@@ -1,0 +1,11 @@
+{
+  "data": {
+    "User": {
+      "updateMyProfile": {
+        "email": "user@example.com",
+        "firstname": "User",
+        "lastname": "Myself"
+      }
+    }
+  }
+}

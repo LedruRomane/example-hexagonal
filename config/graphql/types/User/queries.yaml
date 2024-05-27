@@ -1,0 +1,23 @@
+UserQueries:
+  type: object
+  config:
+    fields:
+      me:
+        type: User
+        resolve: '@=query("User.me")'
+        description: L'utilisateur courant ou null si non authentifié
+
+      find:
+        type: 'User!'
+        access: "@=isGranted('ROLE_ADMIN')"
+        resolve: '@=query("User.find", args["uid"])'
+        description: Récupération d'un utilisateur à partir d'un uid
+        args:
+          uid:
+            type: ULID!
+
+      list:
+        type: '[User!]!'
+        resolve: '@=query("User.list")'
+        access: "@=isGranted('ROLE_ADMIN')"
+        description: Liste des utilisateurs de l'application

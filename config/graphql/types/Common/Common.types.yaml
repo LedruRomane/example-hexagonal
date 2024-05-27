@@ -1,0 +1,17 @@
+ULIDInput:
+  type: custom-scalar
+  config:
+    description: A ULID as a payload input
+    scalarType: '@=newObject("GraphQL\\Type\\Definition\\StringType")'
+
+URL:
+  type: custom-scalar
+  config:
+    description: A URL
+    scalarType: '@=newObject("GraphQL\\Type\\Definition\\StringType")'
+
+Email:
+  type: custom-scalar
+  config:
+    description: An email address
+    scalarType: '@=newObject("GraphQL\\Type\\Definition\\StringType")'

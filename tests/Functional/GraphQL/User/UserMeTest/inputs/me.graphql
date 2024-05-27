@@ -1,0 +1,10 @@
+query {
+  User {
+    me {
+      email
+      firstname
+      roles
+      isAdmin
+    }
+  }
+}

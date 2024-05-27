@@ -1,0 +1,12 @@
+mutation($payload: UserPayload!) {
+  User {
+    create(payload: $payload) {
+      email
+      firstname
+      lastname
+      roles
+      isActive
+      isAdmin
+    }
+  }
+}

@@ -1,5 +1,14 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+security_controllers:
+  resource:
+    path: ../src/Infrastructure/Security/Controller/
+    namespace: App\Infrastructure\Security\Controller
+  type: attribute
+
+front_reset_password:
+  path: /reset-password/{token}
+  host: '%app_front_host%'
+  schemes: '%app_front_scheme%'
+
+login:
+  path: /login
+  methods: POST

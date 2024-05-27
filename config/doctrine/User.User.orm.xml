@@ -1,0 +1,42 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                   https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="App\Domain\User\User" repository-class="App\Infrastructure\User\Repository\UserRepository" table="`user`">
+        <id name="id" type="integer">
+            <generator />
+        </id>
+
+        <field name="uid" type="ulid" unique="true" />
+        <!-- For debug purposes when inspecting the database -->
+        <field name="uid32" length="26" />
+        <lifecycle-callbacks>
+            <lifecycle-callback type="prePersist" method="computeDebugUid32"/>
+        </lifecycle-callbacks>
+
+        <field name="email" unique="true" />
+        <field name="password" />
+        <field name="firstname" />
+        <field name="lastname" />
+
+        <field name="active" type="boolean">
+            <options>
+                <option name="default">1</option>
+            </options>
+        </field>
+
+        <field name="admin" type="boolean">
+            <options>
+                <option name="default">0</option>
+            </options>
+        </field>
+
+        <field name="createdAt" type="datetime">
+            <gedmo:timestampable on="create" />
+        </field>
+        <field name="updatedAt" type="datetime">
+            <gedmo:timestampable on="update" />
+        </field>
+    </entity>
+</doctrine-mapping>

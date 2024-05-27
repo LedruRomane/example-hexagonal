@@ -1,0 +1,56 @@
+security:
+    # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
+    password_hashers:
+        App\Infrastructure\Security\User\Identity:
+            algorithm: auto
+    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
+    providers:
+        users:
+            id: App\Infrastructure\Security\User\UserIdentityProvider
+
+    # https://symfony.com/doc/current/security.html#hierarchical-roles
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        #ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login:
+            pattern: ^/login
+            user_checker: App\Infrastructure\Security\User\IdentityUserChecker
+            stateless: true
+            json_login:
+                check_path: /login
+                username_path: username
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
+        api:
+            jwt: ~
+            pattern:   ^/graphql
+            user_checker: App\Infrastructure\Security\User\IdentityUserChecker
+            stateless: true
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#the-firewall
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+    # - { path: ^/admin, roles: ROLE_ADMIN }
+    # - { path: ^/profile, roles: ROLE_USER }
+
+when@test:
+    security:
+        password_hashers:
+            # By default, password hashers are resource intensive and take time. This is
+            # important to generate secure password hashes. In tests however, secure hashes
+            # are not important, waste resources and increase test times. Let's use plaintext passwords instead:
+            App\Infrastructure\Security\User\Identity: plaintext

@@ -1,0 +1,14 @@
+nelmio_cors:
+    defaults:
+        origin_regex: true
+        allow_origin: ['%env(CORS_ALLOW_ORIGIN)%']
+        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
+        allow_headers: ['Content-Type', 'Authorization', 'Accept-Encoding', 'Cache-Control']
+        allow_credentials: true
+        expose_headers: ['Link', 'Content-Disposition']
+        max_age: 3600
+
+    paths:
+        '^/login': ~
+        '^/logout': ~
+        '^/graphql/': ~

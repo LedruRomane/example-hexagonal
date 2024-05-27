@@ -1,0 +1,3 @@
+when@dev:
+    overblog_graphiql:
+        template: "GraphiQL/index.html.twig"

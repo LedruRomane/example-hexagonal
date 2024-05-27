@@ -1,0 +1,47 @@
+[
+    {
+        "location": "App\\Kernel::boot",
+        "message": "Since symfony/dependency-injection 6.3: Relying on the \"@required\" annotation on method \"App\\Infrastructure\\Bridge\\GraphQL\\Mutation\\AbstractMutation::setContainer()\" is deprecated, use the \"Symfony\\Contracts\\Service\\Attribute\\Required\" attribute instead.",
+        "count": 1
+    },
+    {
+        "location": "App\\Kernel::boot",
+        "message": "Since symfony/dependency-injection 6.3: Relying on the \"@required\" annotation on method \"App\\Infrastructure\\Bridge\\GraphQL\\Resolver\\AbstractResolver::setContainer()\" is deprecated, use the \"Symfony\\Contracts\\Service\\Attribute\\Required\" attribute instead.",
+        "count": 1
+    },
+    {
+        "location": "App\\Infrastructure\\Test\\Listener\\UpdateExpectationsGuardListener",
+        "message": "The \"App\\Infrastructure\\Test\\Listener\\UpdateExpectationsGuardListener\" class implements \"PHPUnit\\Framework\\TestListener\" that is deprecated.",
+        "count": 1
+    },
+    {
+        "location": "App\\Infrastructure\\Test\\Listener\\UpdateExpectationsGuardListener",
+        "message": "The \"App\\Infrastructure\\Test\\Listener\\UpdateExpectationsGuardListener\" class uses \"PHPUnit\\Framework\\TestListenerDefaultImplementation\" that is deprecated The `TestListener` interface is deprecated.",
+        "count": 1
+    },
+    {
+        "location": "App\\Infrastructure\\Test\\Listener\\SymfonyDebugModeListener",
+        "message": "The \"App\\Infrastructure\\Test\\Listener\\SymfonyDebugModeListener\" class implements \"PHPUnit\\Framework\\TestListener\" that is deprecated.",
+        "count": 1
+    },
+    {
+        "location": "App\\Infrastructure\\Test\\Listener\\SymfonyDebugModeListener",
+        "message": "The \"App\\Infrastructure\\Test\\Listener\\SymfonyDebugModeListener\" class uses \"PHPUnit\\Framework\\TestListenerDefaultImplementation\" that is deprecated The `TestListener` interface is deprecated.",
+        "count": 1
+    },
+    {
+        "location": "App\\Tests\\Functional\\GraphQL\\User\\CreateUserTest::_resetDatabase",
+        "message": "Since doctrine/doctrine-bundle 2.2: The \"Doctrine\\Bundle\\DoctrineBundle\\Command\\Proxy\\RunSqlDoctrineCommand\" (doctrine:query:sql) is deprecated, use dbal:run-sql command instead.",
+        "count": 1
+    },
+    {
+        "location": "Symfony\\Bridge\\Monolog\\Logger",
+        "message": "The \"Monolog\\Logger\" class is considered final. It may change without further notice as of its next major version. You should not extend it from \"Symfony\\Bridge\\Monolog\\Logger\".",
+        "count": 1
+    },
+    {
+        "location": "Symfony\\Component\\DependencyInjection\\Argument\\LazyClosure@anonymous\u0000/Volumes/workspace/hexa-example/back/var/cache/test/ContainerWx5bh4J/getPasswordHasherInterfaceService.php:20$45f",
+        "message": "The \"Symfony\\Component\\DependencyInjection\\Argument\\LazyClosure\" class is considered internal. It may change without further notice. You should not use it from \"Symfony\\Component\\DependencyInjection\\Argument\\LazyClosure@anonymous\".",
+        "count": 1
+    }
+]

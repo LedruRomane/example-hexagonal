@@ -1,0 +1,14 @@
+query ListUsers {
+  User {
+    list {
+      uid
+      email
+      firstname
+      lastname
+      roles
+      isActive
+      isAdmin
+      createdAt
+    }
+  }
+}

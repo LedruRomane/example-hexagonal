@@ -1,0 +1,10 @@
+mutation($uid: ULID!, $payload: UserPayload!) {
+  User {
+    update(uid: $uid, payload: $payload) {
+      email
+      firstname
+      lastname
+      isActive
+    }
+  }
+}

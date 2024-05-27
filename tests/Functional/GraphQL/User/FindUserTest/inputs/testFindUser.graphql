@@ -1,0 +1,9 @@
+query($uid: ULID!) {
+  User {
+    find(uid: $uid) {
+      firstname
+      lastname
+      email
+    }
+  }
+}

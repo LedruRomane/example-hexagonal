@@ -1,0 +1,16 @@
+overblog_graphql:
+    batching_method: apollo
+    definitions:
+        schema:
+            query: Query
+            mutation: Mutation
+        mappings:
+            types:
+                -
+                    type: yaml
+                    dir: "%kernel.project_dir%/config/graphql/types"
+                    suffix: null
+                -
+                    type: attribute
+                    dir: "%kernel.project_dir%/src/Application"
+                    suffix: null

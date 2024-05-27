@@ -1,0 +1,14 @@
+{
+  "data": {
+    "User": {
+      "me": {
+        "email": "admin@example.com",
+        "firstname": "Joe",
+        "roles": [
+          "ROLE_ADMIN"
+        ],
+        "isAdmin": true
+      }
+    }
+  }
+}

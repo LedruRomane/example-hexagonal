@@ -1,0 +1,10 @@
+{# templates/GraphiQL/index.html.twig #}
+{% dump("ksjdksqjdlkqjsd") %}
+{% extends '@OverblogGraphiQL/GraphiQL/index.html.twig' %}
+
+{% block graphql_fetcher_headers %}
+    {{ parent() }}
+    {% if GRAPHIQL_JWT_TOKEN is defined %}
+        headers["Authorization"] = "Bearer {{ GRAPHIQL_JWT_TOKEN }}";
+    {% endif %}
+{% endblock graphql_fetcher_headers %}

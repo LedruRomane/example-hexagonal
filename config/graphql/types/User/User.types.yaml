@@ -1,0 +1,33 @@
+User:
+  type: object
+  config:
+    description: 'A user'
+
+    fields:
+
+      uid:
+        type: ULID!
+
+      email:
+        type: String!
+        description: 'Acts as their username'
+
+      firstname:
+        type: String!
+
+      lastname:
+        type: String!
+
+      roles:
+        type: "[String!]"
+        resolve: '@=query("User.roles", value)'
+
+      isActive:
+        type: Boolean!
+
+      isAdmin:
+        type: Boolean!
+
+      createdAt:
+        type: DateTime!
+        description: Date de création

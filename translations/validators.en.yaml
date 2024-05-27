@@ -1,0 +1,3 @@
+The email {{ value }} is already used.: ~
+The {{ value }} reference exists.: ~
+The passwords must be identical.: ~

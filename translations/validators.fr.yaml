@@ -1,0 +1,4 @@
+The email {{ value }} is already used.: " Cet email {{ value }} est déjà utilisé."
+The {{ value }} reference exists.: La référence {{ value }} existe déjà.
+The passwords must be identical.: Les mots de passe doivent être identiques.
+The password strength is too low. Please use a stronger password.: La sécurité du mot de passe est trop faible. Veuillez utiliser un mot de passe plus complexe.

@@ -1,0 +1,57 @@
+{
+  "errors": [
+    {
+      "message": "Invalid payload",
+      "locations": [
+        {
+          "line": 3,
+          "column": 5
+        }
+      ],
+      "path": [
+        "User",
+        "create"
+      ],
+      "code": "INVALID_PAYLOAD",
+      "api_problem": {
+        "type": "https:\/\/symfony.com\/errors\/validation",
+        "title": "Validation Failed",
+        "detail": "payload.email: Cette valeur ne doit pas être vide.\npayload.firstname: Cette valeur ne doit pas être vide.\npayload.lastname: Cette valeur ne doit pas être vide.",
+        "violations": [
+          {
+            "propertyPath": "payload.email",
+            "title": "Cette valeur ne doit pas être vide.",
+            "template": "This value should not be blank.",
+            "parameters": {
+              "{{ value }}": "null"
+            },
+            "type": "urn:uuid:c1051bb4-d103-4f74-8988-acbcafc7fdc3"
+          },
+          {
+            "propertyPath": "payload.firstname",
+            "title": "Cette valeur ne doit pas être vide.",
+            "template": "This value should not be blank.",
+            "parameters": {
+              "{{ value }}": "null"
+            },
+            "type": "urn:uuid:c1051bb4-d103-4f74-8988-acbcafc7fdc3"
+          },
+          {
+            "propertyPath": "payload.lastname",
+            "title": "Cette valeur ne doit pas être vide.",
+            "template": "This value should not be blank.",
+            "parameters": {
+              "{{ value }}": "null"
+            },
+            "type": "urn:uuid:c1051bb4-d103-4f74-8988-acbcafc7fdc3"
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "User": {
+      "create": null
+    }
+  }
+}

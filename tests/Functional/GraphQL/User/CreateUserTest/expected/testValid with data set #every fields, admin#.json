@@ -1,0 +1,16 @@
+{
+  "data": {
+    "User": {
+      "create": {
+        "email": "john.doe@example.com",
+        "firstname": "John",
+        "lastname": "Doe",
+        "roles": [
+          "ROLE_ADMIN"
+        ],
+        "isActive": true,
+        "isAdmin": true
+      }
+    }
+  }
+}

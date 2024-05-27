@@ -1,0 +1,14 @@
+when@dev:
+    # See full configuration: https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#full-default-bundle-configuration
+    zenstruck_foundry: &dev
+        # Whether to auto-refresh proxies by default (https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#auto-refresh)
+        auto_refresh_proxies: true
+        faker:
+            locale: fr_FR
+            seed: 1488357
+
+when@test:
+    zenstruck_foundry:
+        << : *dev
+        global_state:
+            - App\Infrastructure\Test\Fixtures\Story\GlobalTestsStory

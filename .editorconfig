@@ -1,0 +1,28 @@
+[*.{php,html,twig,xml}]
+indent_style = space
+indent_size = 4
+
+[*.{yml,yaml,graphql}]
+indent_style = space
+indent_size = 2
+
+[config/packages/**/*.{yml,yaml}]
+indent_size = 4
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+[webpack.config.js]
+indent_size = 4
+
+[*.json]
+indent_style = space
+indent_size = 4
+
+[tests/**/expected/**/*.json]
+indent_size = 2
+
+[*.{css,scss}]
+indent_style = space
+indent_size = 2

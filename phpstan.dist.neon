@@ -1,0 +1,20 @@
+parameters:
+    checkMissingIterableValueType: false
+
+    level: 'max'
+
+    paths:
+        - 'src'
+
+    # https://github.com/phpstan/phpstan-symfony#configuration
+    symfony:
+        containerXmlPath: var/cache/dev/App_KernelDevDebugContainer.xml
+    scanDirectories:
+        - var/cache/dev/Symfony/Config
+
+    ignoreErrors:
+#        - message: '#Call to an undefined method (.*)#'
+#          path: src/Infra/Fixtures
+
+    strictRules:
+        disallowedConstructs: false
