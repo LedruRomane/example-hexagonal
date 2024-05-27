@@ -15,3 +15,6 @@ We have a layered architecture representing the different parts of a Symfony app
 - **Infrastructure**: Implementation of the adapters described in the interfaces of the lower layers and the services necessary to communicate with the infrastructure.
 
 ![Hexagonal Architecture](./hexa.png)
+
+> [!NOTE]
+> See : [Hexagonal Architecture](https://www.elao.com/blog/dev/architecture-hexagonale-symfony) for more information.
