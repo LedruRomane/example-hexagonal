@@ -14,4 +14,4 @@ We have a layered architecture representing the different parts of a Symfony app
 - **Application**: Application code, commands, queries with interfaces for isolation.
 - **Infrastructure**: Implementation of the adapters described in the interfaces of the lower layers and the services necessary to communicate with the infrastructure.
 
-![Hexagonal Architecture](./hexa.jpeg)
+![Hexagonal Architecture](./hexa.png)
